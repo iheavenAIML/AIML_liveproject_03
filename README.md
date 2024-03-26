@@ -1,6 +1,6 @@
 ###  Business Use Case:
 
-As an MLAI practitioner we are tasked to compare the performance of the classifiers `KNeighborsClassifier()` | `LogisticRegression()` | `DecisionTreeClassifier()` | and `SVC()` in the context of Portuguese banking institution dataset detailing bank’s marketing campaigns to facilitate subscription to a term deposit. Summary of findings related to AI models’ performance along with data analysis, pre-processing, modeling, and business conclusions are expected as deliverables of this exercise.
+As an MLAI practitioner we are tasked to compare the performance of the classifiers `KNeighborsClassifier()` | `LogisticRegression()` | `DecisionTreeClassifier()` | and `SVC()` in the context of Portuguese banking institution dataset detailing bankâ€™s marketing campaigns to facilitate subscription to a term deposit. Summary of findings related to AI modelsâ€™ performance along with data analysis, pre-processing, modeling, and business conclusions are expected as deliverables of this exercise.
 
 ### Findings | Actionable Insights | Recommendations:
 
@@ -17,12 +17,14 @@ As an MLAI practitioner we are tasked to compare the performance of the classifi
   - After using `LabelEncoder()`, 3 columns remained to be of object type, one of which is the target variable 'y_yes'
   - Dropped 'poutcome' with 65% of 'unknown' values and 'month' as features of low relevance; now only one column 'y_yes' remained to be categorical, which is totally okay since it is a target/output variable
   - Overall, 39,922 prospective clients (88.3%) out of the entire sample population (45,211 data points) did not subscribe to a term deposit as derived from past observations
-  - It appeared that ‘duration’ (last contact in seconds), ‘pdays’ (number of days passed by after the contact), and ‘previous’ (number of contacts performed during last campaigns) are the most influential factors affecting the subscription to a term deposit
-  - Correlation matrix of features also confirmed that ‘duration’ (last contact in seconds) has the biggest impact on oucome variable 'y_yes'
+  - It appeared that â€˜durationâ€™ (last contact in seconds), â€˜pdaysâ€™ (number of days passed by after the contact), and â€˜previousâ€™ (number of contacts performed during last campaigns) are the most influential factors affecting the subscription to a term deposit
+  - Correlation matrix of features also confirmed that â€˜durationâ€™ (last contact in seconds) has the biggest impact on oucome variable 'y_yes'
   - Pairplot suggested that data are not evenly distributed, hinting at the need for scaling the data when we will come to data modeling, classifier fitting stage
   - The scatterplot of two most influential features on term deposit suggests that most decisions were made with a duration of the contact up to 25 min (1500/60 sec) and within 1.2 years (450 days / 365 days) since the last marketing campaign
   
 <font color="blue">Recommendations for increasing subscriptions to term deposits and making accurate predictions</font>:
-  - Marketing team should focus efforts on keeping duration of the contact within 10 – 20 min range
+  - Marketing team should focus efforts on keeping duration of the contact within 10 â€“ 20 min range
   - Meaningful commitment should be made to staying in touch with prospective clientele at least once annually
   - AI model should be chosen based the trade-offs between accuracy, precision, recall, and computational efficiency as outlined in 'Model Comparison' section above
+
+Please find an in-depth data analysis and AI modeling with the code base in the following file: [Jupiter Notebook with detailed analysis and code base](https://github.com/iheavenAIML/AIML_liveproject_03/blob/main/practicalApplication_v03_iheaven.ipynb)
